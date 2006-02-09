@@ -31,6 +31,7 @@ Component INCLUDE_BERKELEYDB {
 			client.o \
 			crdel_auto.o \
 			crdel_rec.o \
+			crypto_stub.o \
 			db.o \
 			db_am.o \
 			db_auto.o \
@@ -49,6 +50,7 @@ Component INCLUDE_BERKELEYDB {
 			db_method.o \
 			db_open.o \
 			db_overflow.o \
+			db_ovfl_vrfy.o \
 			db_pr.o \
 			db_rec.o \
 			db_reclaim.o \
@@ -328,6 +330,12 @@ Module vsnprintf.o {
 	SRC_PATH_NAME	$(PRJ_DIR)/../../clib/vsnprintf.c
 }
 
+Module crypto_stub.o {
+
+	NAME		crypto_stub.o
+	SRC_PATH_NAME	$(PRJ_DIR)/../../common/crypto_stub.c
+}
+
 Module db_byteorder.o {
 
 	NAME		db_byteorder.o
@@ -470,6 +478,12 @@ Module db_overflow.o {
 
 	NAME		db_overflow.o
 	SRC_PATH_NAME	$(PRJ_DIR)/../../db/db_overflow.c
+}
+
+Module db_ovfl_vrfy.o {
+
+	NAME		db_ovfl_vrfy.o
+	SRC_PATH_NAME	$(PRJ_DIR)/../../db/db_ovfl_vrfy.c
 }
 
 Module db_pr.o {
