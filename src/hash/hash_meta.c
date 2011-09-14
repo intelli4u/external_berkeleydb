@@ -47,7 +47,10 @@ again:
 		return (ret);
 	}
 
-	if (F_ISSET(dbp, DB_AM_SUBDB) && revision != dbp->mpf->mfp->revision) {
+	if (F_ISSET(dbp, DB_AM_SUBDB) &&
+	    (revision != dbp->mpf->mfp->revision ||
+	    (TYPE(hcp->hdr) != P_HASHMETA &&
+	    !IS_RECOVERING(dbp->env) && !F_ISSET(dbp, DB_AM_RECOVER)))) {
 		ret = __LPUT(dbc, hcp->hlock);
 		t_ret =
 		    __memp_fput(mpf, dbc->thread_info, hcp->hdr, dbc->priority);
@@ -87,7 +90,9 @@ __ham_release_meta(dbc)
 		hcp->hdr = NULL;
 	}
 
-	return (__TLPUT(dbc, hcp->hlock));
+	ret = __TLPUT(dbc, hcp->hlock);
+	hcp->hlock.mode = DB_LOCK_NG;
+	return (ret);
 }
 
 /*
