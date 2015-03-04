@@ -150,6 +150,10 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\blob\blob_fileops.c"/>
+    <ClCompile Include="..\..\src\blob\blob_page.c"/>
+    <ClCompile Include="..\..\src\blob\blob_stream.c"/>
+    <ClCompile Include="..\..\src\blob\blob_util.c"/>
     <ClCompile Include="..\..\src\btree\bt_compact.c"/>
     <ClCompile Include="..\..\src\btree\bt_compare.c"/>
     <ClCompile Include="..\..\src\btree\bt_compress.c"/>
@@ -176,6 +180,7 @@
     <ClCompile Include="..\..\lang\cxx\cxx_channel.cpp"/>
     <ClCompile Include="..\..\lang\cxx\cxx_db.cpp"/>
     <ClCompile Include="..\..\lang\cxx\cxx_dbc.cpp"/>
+    <ClCompile Include="..\..\lang\cxx\cxx_dbstream.cpp"/>
     <ClCompile Include="..\..\lang\cxx\cxx_dbt.cpp"/>
     <ClCompile Include="..\..\lang\cxx\cxx_env.cpp"/>
     <ClCompile Include="..\..\lang\cxx\cxx_except.cpp"/>
@@ -270,7 +275,6 @@
     <ClCompile Include="..\..\src\hash\hash_verify.c"/>
     <ClCompile Include="..\..\src\heap\heap.c"/>
     <ClCompile Include="..\..\src\heap\heap_auto.c"/>
-    <ClCompile Include="..\..\src\heap\heap_autop.c"/>
     <ClCompile Include="..\..\src\heap\heap_backup.c"/>
     <ClCompile Include="..\..\src\heap\heap_conv.c"/>
     <ClCompile Include="..\..\src\heap\heap_method.c"/>
@@ -278,6 +282,7 @@
     <ClCompile Include="..\..\src\heap\heap_rec.c"/>
     <ClCompile Include="..\..\src\heap\heap_reclaim.c"/>
     <ClCompile Include="..\..\src\heap\heap_stat.c"/>
+    <ClCompile Include="..\..\src\heap\heap_upgrade.c"/>
     <ClCompile Include="..\..\src\heap\heap_verify.c"/>
     <ClCompile Include="..\..\src\hmac\hmac.c"/>
     <ClCompile Include="..\..\lang\hsearch\hsearch.c"/>
@@ -347,6 +352,7 @@
     <ClCompile Include="..\..\src\os_windows\os_map.c"/>
     <ClCompile Include="..\..\src\os_windows\os_mkdir.c"/>
     <ClCompile Include="..\..\src\os_windows\os_open.c"/>
+    <ClCompile Include="..\..\src\os_windows\os_rmdir.c"/>
     <ClCompile Include="..\..\src\os\os_path.c"/>
     <ClCompile Include="..\..\src\os\os_pid.c"/>
     <ClCompile Include="..\..\src\os_windows\os_rename.c"/>
