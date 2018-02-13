@@ -104,8 +104,9 @@ __db_pthread_mutex_init(env, mutex, flags)
 			RET_SET((pthread_rwlockattr_init(&rwlockattr)), ret);
 			if (ret != 0)
 				goto err;
-			RET_SET((pthread_rwlockattr_setpshared(
-			    &rwlockattr, PTHREAD_PROCESS_SHARED)), ret);
+			//Marked for the function not implemented by Jerry in 20130412
+			//RET_SET((pthread_rwlockattr_setpshared(
+			//    &rwlockattr, PTHREAD_PROCESS_SHARED)), ret);
 			rwlockattrp = &rwlockattr;
 		}
 #endif
@@ -127,8 +128,9 @@ __db_pthread_mutex_init(env, mutex, flags)
 		RET_SET((pthread_mutexattr_init(&mutexattr)), ret);
 		if (ret != 0)
 			goto err;
-		RET_SET((pthread_mutexattr_setpshared(
-		    &mutexattr, PTHREAD_PROCESS_SHARED)), ret);
+		//Marked for the function not implemented by Jerry in 20130412
+		//RET_SET((pthread_mutexattr_setpshared(
+		//    &mutexattr, PTHREAD_PROCESS_SHARED)), ret);
 		mutexattrp = &mutexattr;
 	}
 #endif
@@ -149,8 +151,9 @@ __db_pthread_mutex_init(env, mutex, flags)
 				goto err;
 
 			condattrp = &condattr;
-			RET_SET((pthread_condattr_setpshared(
-			    &condattr, PTHREAD_PROCESS_SHARED)), ret);
+			//Marked for the function not implemented by Jerry in 20130412
+			//RET_SET((pthread_condattr_setpshared(
+			//    &condattr, PTHREAD_PROCESS_SHARED)), ret);
 		}
 #endif
 
